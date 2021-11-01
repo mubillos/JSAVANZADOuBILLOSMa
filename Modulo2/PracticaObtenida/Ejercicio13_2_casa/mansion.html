@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba de la mansion</title>
+    <script src="casa.js" charset="utf-8"></script>
+    <script src="mansion.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>La mansion tiene direccion, pisos y propietario</h1>
+    <script type="text/javascript">
+      let mansion = new Mansion( 'Hollywood CA, USA', 6, 'Brad Pitt' );
+      document.write("<br/>direccion=" + mansion.address);
+      document.write("<br/>cantidad de pisos=" + mansion.floors);
+      document.write("<br/>propietario=" + mansion.owner);
+    </script>
+  </body>
+</html>

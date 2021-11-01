@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Casas </title>
+
+    <script src="casa.js" charset="utf-8">
+
+    </script>
+  </head>
+  <body>
+    <h1>El auto tiene marca modelo  año de fabricación y Color</h1>
+    <script type="text/javascript">
+     let auto= new Car('Subaru', 'Outback', 2005, 'Grey' );
+     document.write("<br/>Marca="+ auto.make);
+     document.write("<br/>modelo="+ auto.make);
+     document.write("<br/>Year="+ auto.year);
+     document.write("<br/>color="+ auto.color);
+
+     auto.setColor('Red')
+     document.write("<br/>Nuevo color="+ auto.color);
+
+
+
+    </script>
+  </body>
+</html>

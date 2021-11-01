@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="cuenta.js" charset="utf-8"></script>
+    <script src="CuentaCorriente.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Probamos la cuenta corriente</h1>
+    <script type="text/javascript">
+      let cc = new CuentaCorriente(123, 7300.5, 1000);
+      document.write("<br/>valores orignales");
+      document.write("<br/>numero=" + cc.numero);
+      document.write("<br/>saldo=" + cc.saldo);
+      document.write("<br/>descubierto=" + cc.descubierto);
+
+      document.write("<br/><br/><br/>Ahora le sumo 100.3");
+      cc.acreditar(100.3);
+
+      document.write("<br/>numero=" + cc.numero);
+      document.write("<br/>saldo=" + cc.saldo);
+      document.write("<br/>descubierto=" + cc.descubierto);
+
+      document.write("<br/><br/><br/>Ahora le resto 400.8");
+      cc.debitar(400.8);
+
+      document.write("<br/>numero=" + cc.numero);
+      document.write("<br/>saldo=" + cc.saldo);
+      document.write("<br/>descubierto=" + cc.descubierto);
+
+      document.write("<br/><br/><br/>Ahora le resto 7500 y me tiene que dejar");
+      cc.debitar(7500);
+
+      document.write("<br/>numero=" + cc.numero);
+      document.write("<br/>saldo=" + cc.saldo);
+      document.write("<br/>descubierto=" + cc.descubierto);
+
+      document.write("<br/><br/><br/>Ahora le resto 600 y NO me tiene que dejar");
+      document.write("<br/>debe dejar el mismo saldo");
+      cc.debitar(600);
+
+      document.write("<br/>numero=" + cc.numero);
+      document.write("<br/>saldo=" + cc.saldo);
+      document.write("<br/>descubierto=" + cc.descubierto);
+
+    </script>
+  </body>
+</html>

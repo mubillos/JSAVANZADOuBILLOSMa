@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba de cuenta</title>
+    <script src="cuenta.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Se probara cuenta</h1>
+    <script type="text/javascript">
+        let cuenta = new Cuenta(1,1200);
+        document.write("<br/><br/><br/>Cuenta original") ;
+        document.write("<br/>numero =" + cuenta.numero);
+        document.write("<br/>numero =" + cuenta.saldo);
+
+        document.write("<br/><br/><br/>Ahora le sumo 300") ;
+        cuenta.acreditar(300);
+
+        document.write("<br/>numero =" + cuenta.numero);
+        document.write("<br/>numero =" + cuenta.saldo);
+
+        document.write("<br/><br/><br/>Ahora le resto 500") ;
+        cuenta.debitar(500);
+
+        document.write("<br/>numero =" + cuenta.numero);
+        document.write("<br/>numero =" + cuenta.saldo);
+
+        document.write("<br/><br/><br/>prueba del toString()") ;
+        document.write("<br/>cuenta.toString()" + cuenta);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="cuenta.js" charset="utf-8"></script>
+    <script src="CajaDeAhorro.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>vamos a proba la caja de ahorro</h1>
+    <script type="text/javascript">
+      let  ca = new CajaDeAhorro(200,1500, 2.5);
+
+      document.write("<br/>valores originales");
+      document.write("<br/>numero=" + ca.numero);
+      document.write("<br/>saldo=" + ca.saldo);
+      document.write("<br/>numero=" + ca.interes);
+
+      document.write("<br/><br/><br/>Ahora le sumo 500");
+      ca.acreditar(500);
+
+      document.write("<br/>numero=" + ca.numero);
+      document.write("<br/>saldo=" + ca.saldo);
+      document.write("<br/>numero=" + ca.interes);
+
+      document.write("<br/><br/><br/>Ahora le debito 300");
+      ca.debitar(300);
+
+      document.write("<br/>numero=" + ca.numero);
+      document.write("<br/>saldo=" + ca.saldo);
+      document.write("<br/>numero=" + ca.interes);
+
+      document.write("<br/><br/><br/>Ahora le debito 2000 y no me tiene que dejar");
+      ca.debitar(2000);
+
+      document.write("<br/>numero=" + ca.numero);
+      document.write("<br/>saldo=" + ca.saldo);
+      document.write("<br/>numero=" + ca.interes);
+
+      document.write("<br/><br/><br/>prueba del toString()") ;
+      document.write("<br/>cuenta.toString()" + ca);
+
+    </script>
+  </body>
+</html>
