@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PromiseSolving</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+      </head>
+  <body>
+    <h1>PromiseSolving</h1>
+    <script type="text/javascript">
+  try {
+ higherOrder( 1, ()=> {
+  
+ } ); );
+      const myPromise = new Promise( ( resolve, reject ) => {
+       console.log( 'Starting asynchronous work!' );
+
+       setTimeout( () => { resolve( 'Done!' ); }, 0 );
+      } );
+      myPromise.then( value => console.log( value ) );
+}catch ( err ) {
+ console.log( "Got error:"+ err.message );
+}
+
+</script>
+</body>
+</html>

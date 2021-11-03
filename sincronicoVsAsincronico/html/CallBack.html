@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Callback</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+      </head>
+  <body>
+    <h1>Callback</h1>
+    <script type="text/javascript">
+
+      try {
+ higherOrder( 1, null );
+} catch ( err ) {
+ console.log( "Got error:"+ err.message );
+}
+higherOrder( 1, () => {
+ console.log( 'Callback Called!' )
+} );
+</script>
+</body>
+</html>

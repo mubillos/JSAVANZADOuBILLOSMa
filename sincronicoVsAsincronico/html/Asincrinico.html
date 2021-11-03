@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SINCRONICO</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+      </head>
+  <body>
+    <h1>Asincronico</h1>
+    <script type="text/javascript">
+setTimeout( () => {
+ // WARNING: this may take a long time to run on a slow computer
+ // Try with smaller numbers first
+ for( let i = 0; i < 2000000000; i++ ) {}
+ console.log( 'done delaying' );
+}, 0 );
+setTimeout( () => { console.log( 'done!' ) }, 0 );
+
+
+
+</script>
+</body>
+</html>
