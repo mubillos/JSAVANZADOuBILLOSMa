@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Generador de fibonacci</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Generador de Fibonacci</h1>
+    <script type="text/javascript">
+      const generator = genFibonacci();
+
+      for (var i = 0; i <10 ; i++) {
+        var obj = generator.next();
+        document.write(`<br/><br/>obj.value=${obj.value}
+                          <br/>obj.done=${obj.done}`);
+      }
+      console.log( generator.next("valor"), generator.next(), generator.next() );
+    </script>
+  </body>
+</html>

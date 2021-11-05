@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recorrer Figuras con iterador</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+    <script src="../../CuentaProfe/Cuenta.js" charset="utf-8"></script>
+    <script src="../../CuentaProfe/CajaDeAhorro.js" charset="utf-8"></script>
+    <script src="../../CuentaProfe/CuentaCorriente.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>se van a mostrar todas las cuentas del array utilizando iterador</h1>
+    <script type="text/javascript">
+      let arraycuentas =new Array(new CajaDeAhorro(1,1000,2.3),
+                                  new CuentaCorriente(2,2000,1000 ),
+                                  new CajaDeAhorro(3,3000, 5.2),
+                                  new CuentaCorriente(4,5000,3000 ),
+                                  new CajaDeAhorro(5,1500, 3.3),
+                                  new CuentaCorriente(6,2500,1300 )   );
+
+    let it = createIterator( arraycuentas );
+    var obj = it.next();
+    var contador =0;
+    while(!obj.done){
+        document.write(`<br/><br/>cuenta[${contador++}]${obj.value}`);
+        obj=it.next();
+    }
+    </script>
+  </body>
+</html>

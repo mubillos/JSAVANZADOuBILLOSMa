@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Iterador</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Uso de iterador con un Array 'Hello', 'World' </h1>
+    <script type="text/javascript">
+      let it = createIterator( [ 'Hello', 'World' ] );
+      var obj=it.next();
+      document.write(`<br/> it.next() obj.value= ${obj.value} - obj.done= ${obj.done}`)
+      console.log( obj);
+      // Expected output: { value: 'Hello', done: false }
+      obj=it.next();
+      document.write(`<br/> it.next() obj.value= ${obj.value} - obj.done= ${obj.done}`)
+      console.log( obj);
+      // Expected output: { value: 'World' , done: false
+      obj=it.next();
+      document.write(`<br/> it.next() obj.value= ${obj.value} - obj.done= ${obj.done}`)
+      console.log( obj);
+      // Expected output: { value: undefined, done: true }
+    </script>
+  </body>
+</html>

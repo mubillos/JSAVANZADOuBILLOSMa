@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Generator</title>
+    <script src="../js/funciones.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Ejemplo de generator</h1>
+    <script type="text/javascript">
+      const generator = gen();
+
+      for (var i = 0; i <5 ; i++) {
+        var obj = generator.next();
+        document.write(`<br/><br/>obj.value=${obj.value}
+                          <br/>obj.done=${obj.done}`);
+      }
+
+      console.log( generator.next("valor"), generator.next(), generator.next() );
+    </script>
+  </body>
+</html>
