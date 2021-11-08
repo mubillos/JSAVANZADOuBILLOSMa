@@ -9,15 +9,19 @@
     <h1>PromiseSolving</h1>
     <script type="text/javascript">
   try {
- higherOrder( 1, ()=> {
-  
- } ); );
-      const myPromise = new Promise( ( resolve, reject ) => {
-       console.log( 'Starting asynchronous work!' );
+       const myPromise = new Promise( ( resolve, reject ) => {
+      console.log( 'Starting asynchronous work!' );
 
        setTimeout( () => { resolve( 'Done!' ); }, 0 );
+       reject( new Error 'Promise was resolved!' );
       } );
+
       myPromise.then( value => console.log( value ) );
+      myPromise.catch( err => console.log( err ) );
+ Snippet 2.22: Promise rejection wi
+      myPromse.finally( value => {
+       console.log( 'Finally!' );
+       } );
 }catch ( err ) {
  console.log( "Got error:"+ err.message );
 }
