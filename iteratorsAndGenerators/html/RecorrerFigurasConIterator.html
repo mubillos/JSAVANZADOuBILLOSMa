@@ -4,27 +4,28 @@
     <meta charset="utf-8">
     <title>Recorrer cuentas con iterador</title>
     <script src="../js/funciones.js" charset="utf-8"></script>
-    <script src="../clases/js/Figura.js" charset="utf-8"></script>
-    <script src="../clases/js/Cuadrado.js" charset="utf-8"></script>
-    <script src="../clases/js/Rectangulo.js" charset="utf-8"></script>
-    <script src="../clases/js/Circulo.js" charset="utf-8"></script>
-    <script src="../clases/js/Triangulo.js" charset="utf-8"></script>
+    <script src="../js/Figura.js" charset="utf-8"></script>
+    <script src="../js/Cuadrado.js" charset="utf-8"></script>
+    <script src="../js/Rectangulo.js" charset="utf-8"></script>
+    <script src="../js/Circulo.js" charset="utf-8"></script>
+    <script src="../js/Triangulo.js" charset="utf-8"></script>
       </head>
   </head>
   <body>
     <h1>se van a mostrar todas las Figuras del array utilizando iterador</h1>
     <script type="text/javascript">
-      let arrayfiguras =new Array((new Cuadrado('Cuadrado1',50),
-                              new Cuadrado('Cuadrado2',20),
-                              new Rectangulo('Rectagulo1',20,6),
-                              new Rectangulo('Rectagulo2',30,5),
-                                new Triangulo('Triangulo1',30,15),
-                                new Triangulo('Triangulo2',35,10),
-                                new   Circulo('Circulo1',15),
-                                new Circulo('Circulo2',10)
- );
+    let figuras = new Array(new Cuadrado('Cuadrado1',50),
+                            new Cuadrado('Cuadrado2',20),
+                            new Rectangulo('Rectagulo1',20,6),
+                            new Rectangulo('Rectagulo2',30,5),
+                              new Triangulo('Triangulo1',30,15),
+                              new Triangulo('Triangulo2',35,10),
+                              new   Circulo('Circulo1',15),
+                              new Circulo('Circulo2',10)
 
-    let it = createIterator( arrayfiguras );
+                          );
+
+    let it = createIterator( figuras );
     var obj = it.next();
     var contador =0;
     while(!obj.done){
