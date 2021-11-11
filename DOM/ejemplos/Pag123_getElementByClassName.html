@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div class="example">Some text here</div>
+    <img class="example"></img>
+    <style class="example"></style>
+    <script type="text/javascript">
+
+      const x = document.getElementsByClassName( 'example' );
+
+      document.write(  " <br/>div el texto es  "+  x[0].innerText + " la clase es   " + x[0].className)
+      document.write(  "<br/>img  el texto es"+  x[1].innerText + " la clase es " + x[1].className)
+
+      document.write( "<br/> style  el texto es"+ x[2].innerText +  " la clase es " + x[2].className)
+
+
+
+    </script>
+  </body>
+</html>

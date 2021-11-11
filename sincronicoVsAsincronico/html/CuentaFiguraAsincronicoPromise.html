@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CuentasFigurasAsincronico</title>
+
+    <script src="../js/funciones.js" charset="utf-8"></script>
+    <script src="../js/Figura.js" charset="utf-8"></script>
+    <script src="../js/Cuadrado.js" charset="utf-8"></script>
+    <script src="../js/Rectangulo.js" charset="utf-8"></script>
+    <script src="../js/Circulo.js" charset="utf-8"></script>
+    <script src="../js/Triangulo.js" charset="utf-8"></script>
+    <script src="../js/Cuenta.js" charset="utf-8"></script>
+    <script src="../js/CajaDeAhorro.js" charset="utf-8"></script>
+    <script src="../js/CuentaCorriente.js" charset="utf-8"></script>
+  </head>
+      </head>
+  <body>
+    <h1>CuentasFigurasAsincronico</h1>
+    <script type="text/javascript">
+
+      let figuras =new Array(new Cuadrado('Cuadrado1',50),
+                              new Cuadrado('Cuadrado2',20),
+                              new Rectangulo('Rectagulo1',20,6),
+                              new Rectangulo('Rectagulo2',30,5),
+                                new Triangulo('Triangulo1',30,15),
+                                new Triangulo('Triangulo2',35,10),
+                                new   Circulo('Circulo1',15),
+                                new Circulo('Circulo2',10)
+ );
+
+ let cuentas =new Array(new CajaDeAhorro(1,1000,2.3),
+                             new CuentaCorriente(2,2000,1000 ),
+                             new CajaDeAhorro(3,3000, 5.2),
+                             new CuentaCorriente(4,5000,3000 ),
+                             new CajaDeAhorro(5,1500, 3.3),
+                             new CuentaCorriente(6,2500,1300 )   );
+setTimeout( () => {
+ // WARNING: this may take a long time to run on a slow computer
+ // Try with smaller numbers first
+ for( let i = 0; i < 2000000000; i++ ) {}
+ console.log( 'done delaying' );
+}, 0 );
+setTimeout( () => { console.log( 'done!' ) }, 0 );
+
+/*const myPromise = new Promise( ( resolve, reject ) => {
+console.log( 'Starting asynchronous work!' );
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************1-Todas las cuentas********************<br/>")
+  cuentas.forEach((cuenta,i)=>{
+    document.write(`<br/><br/>cuenta[${i}]
+                    <br/> cuenta=${cuenta}`);
+  })
+resolve('ok');
+},30);
+/
+setTimeout( () => { resolve( 'Done!' ); }, 0 );
+reject( new Error 'Promise was resolved!' );
+} );*/
+const myPromise = new Promise( ( resolve, reject ) => {
+console.log( 'Starting asynchronous work!' );
+
+  fn_MostrarArray(()=>{
+    document.write("<br/>**********************1-Todas las cuentas********************<br/>")
+    var isError=false;
+
+    cuentas.forEach((cuenta,i)=>{
+try {
+     cuenta.debitar(1500)
+
+
+} catch (e) {
+    console.console.log(`e=[${e}`);
+        isError=true;
+      }
+      document.write(`<br/><br/>cuenta[${i}]
+                      <br/> cuenta=${cuenta}`);
+  }
+);
+console.console.log(`isError=${isError}`);
+if (isError==true) {
+reject( new Error (`Se produjo un error= Saldo insuficiente`) );
+}
+else {
+resolve('ok');
+}
+
+},30);
+
+const myPromise = new Promise( ( resolve, reject ) => {
+console.log( 'Starting asynchronous work!' );
+
+  fn_MostrarArray(()=>{
+    document.write("<br/>**********************1-Todas las cuentas********************<br/>")
+    var isError=false;
+
+    cuentas.forEach((cuenta,i)=>{
+try {
+     cuenta.debitar(1500)
+
+
+} catch (e) {
+    console.console.log(`e=[${e}]
+        `);
+        isError=true;
+      }
+      document.write(`<br/><br/>cuenta[${i}]
+                      <br/> cuenta=${cuenta}`);
+  }
+);
+console.console.log(`isError=${isError}`);
+if (isError==true) {
+reject( new Error (`Se produjo un error= Saldo insuficiente`) );
+}
+else {
+res0olve('ok');
+}
+
+},15);
+
+</script>
+</body>
+</html>
+
+
+/*const myPromise2 = new Promise( ( resolve, reject ) => {
+console.log( 'Starting asynchronous work!' );
+
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************2-Todas las figuras********************<br/>")
+  figuras.forEach((figura,i)=>{
+    document.write(`<br/><br/>figura[${i}]
+                    <br/> figura=${figura}`);
+  });
+},45);
+
+setTimeout( () => { resolve( 'Done!' ); }, 0 );
+reject( new Error ('Promise was resolved!' ));
+} );
+
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************2-Todas las figuras********************<br/>")
+  figuras.forEach((figura,i)=>{
+    document.write(`<br/><br/>figura[${i}]
+                    <br/> figura=${figura}`);
+  })
+},45);
+
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************3-Todas las cuentas con Saldo Mayor a 1500********************<br/>")
+  cuentas.filter(cuenta=>cuenta.saldo>1500 )
+  .forEach((figura,i)=>{
+    document.write(`<br/><br/>cuenta[${i}]
+                    <br/> cuenta=${figura}`);
+  })
+},15);
+
+
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************4-Todas las figuras con Superficie Mayor a 50********************<br/>")
+  figuras.filter(figura=>figura.calcularSuperficie()>50 )
+  .forEach((figura,i)=>{
+    document.write(`<br/><br/>figura[${i}]
+                    <br/> figura=${figura}`);
+  })
+},90);
+
+fn_MostrarArray(()=>{
+  document.write("<br/>**********************5-Todas las figuras con perimetro Mayor a 100********************<br/>")
+  figuras.filter(figura=>figura.calcularPerimetro()>100)
+  .forEach((figura,i)=>{
+    document.write(`<br/><br/>figura[${i}]
+                    <br/> figura=${figura}`);
+  })
+},105);*/

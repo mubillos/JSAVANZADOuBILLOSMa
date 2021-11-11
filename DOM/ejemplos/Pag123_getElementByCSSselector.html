@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="id1">Some text here</div>
+  <img class="class"></img>
+    <script type="text/javascript">
+
+      const elem = document.querySelector( 'img.class' );
+      const elems = document.querySelectorAll( 'img.class, #id1' );
+     document.write( "<br/> id div=" +elems[0].id);
+     document.write( "<br/> text div=" +elems[0].innerText);
+      document.write( "<br/> img =" +elems[1].className);
+
+document.write( "<br/> img querySelector la class es: =" +elem.className);
+
+
+    </script>
+  </body>
+</html>
