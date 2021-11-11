@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div0">
+  <div id="div1"> Some text here </div>
+  <div id="div2"> Some text here </div>
+  <div id="div3"> Some text here </div>
+  </div>
+  <script>
+  const div0 = document.getElementById( 'div0' );
+    const div1 = document.getElementById( 'div1' );
+      const div2 = document.getElementById( 'div2' );
+        const div3 = document.getElementById( 'div3' );
+  const child1 = div0.firstChild; //div1
+  const child2 = div0.childNodes[1]; // div2
+  const child3 = div0.lastChild; // div3
+
+  document.write("<br/> div0 id:  " + div0.id);
+  document.write("<br/> div1 id:  " + div1.id);
+
+  document.write("<br/> div1 texto: " + div1.innerText);
+  document.write("<br/> div2 id:  " + div2.id);
+  document.write("<br/> div2 texto: " + div2.innerText);
+  document.write("<br/> div3 id:  " + div3.id);
+  document.write("<br/> div3 texto: " + div3.innerText);
+
+  document.write("<br/> div0 primer hijo : " +  div0.firstElementChild.id);
+
+  document.write("<br/> div0 segundo hijo : " +  div0.childNodes[1].id);
+  document.write("<br/> div0 ultimo hijo : " + div0.lastElementChild.id);
+
+  </script>
+  </body>
+</html>

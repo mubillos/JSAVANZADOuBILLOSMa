@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div1">
+       <div id="div2">
+      <div id="div3"> Some text here </div>
+</div>
+</div>
+<script>
+const div3 = document.getElementById( 'div3' );
+const div2 = div3.parentNode;
+const div1 = div2.parentNode;
+document.write("<br/> div1 id:  " + div1.id);
+document.write("<br/> div3 parent: " + div3.parentNode.id);
+document.write("<br/> div2 parent: " + div2.parentNode.id);
+document.write("<br/> div3 id: " + div3.id);
+document.write("<br/> div3 texto: " + div3.innerText);
+</script>
+
+  </body>
+</html>
