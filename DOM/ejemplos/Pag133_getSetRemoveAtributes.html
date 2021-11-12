@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div1"> PRO</div>
+  <script>
+  const div1 = document.getElementById( 'div1' );
+  div1.setAttribute( 'testName', 'testValue' );
+
+ div1.setAttribute( 'class', 'clase1' );
+  div1.setAttribute( 'textContent', 'hola' );
+  //  div1.setAttribute( 'innerText', 'hola' );
+    document.write("<br/> el texto del div1  es  " + div1.innerText);
+
+    div1.innerText='prueba'
+const textContent=div1.getAttribute( 'textContent' );
+  const atributo=div1.getAttribute( 'testName' );
+const clase=div1.getAttribute('class');
+//  div1.removeAttribute( 'testName' );// comente el remove para poder mostrar el valor del atributo agregado
+
+  document.write("<br/> div1 id:  " + div1.id);
+  document.write("<br/> div1 cantidad de hijos:  " + div1.childElementCount);
+//document.write("<br/> el hijo de div1 es:  " +div1.childNodes[1].id);
+document.write("<br/> el atributo nuevo es  " +atributo);
+document.write("<br/> la class nueva de div1 es  " + clase);
+document.write("<br/> el atributo textContent  agregado a  div1 es  " + textContent);
+
+document.write("<br/> el texto del div1 es  " + div1.innerText);
+
+
+
+
+  </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div1">
+<div id="div2"></div>
+</div>
+
+    <script>
+    const div1 = document.getElementById( 'div1' );
+    const div2 = document.getElementById( 'div2' );
+    const div3 = document.createElement( 'div3' );
+    const div4 = document.createElement( 'div4' );
+    div1.insertBefore( div3, div2 );
+    div1.insertBefore( div4, null );
+
+
+  document.write("<br/> div1 id:  " + div1.id);
+  document.write("<br/> div1 cantidad de hijos:  " + div1.childElementCount);
+document.write("<br/> el hijo de div1 es:  " +div1.childNodes[1].id);
+document.write("<br/> el texto del hijo de div1 es:  " +div2.innerText);
+  document.write("<br/> div2 id:  " + div2.id);
+  document.write("<br/> div2 cantidad de hijos:  " + div2.childElementCount)
+
+
+
+  </script>
+
+
+  </body>
+</html>

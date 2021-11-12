@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div1" class="testClass"></div>
+    <script>
+    const classes = document.getElementById( 'div1' ).classList;
+
+  document.write("<br/> div1 id:  " + classes.id);
+  document.write("<br/> div1 class:  " + classes.class);
+    classes.add( 'class1', 'class2' ); // adds class1 and class2
+
+    classes.remove( 'testClass' ); // removes testClass
+    classes.item( 1 ); // gets class at index 1: class2
+    classes.toggle( 'class2' ); // removes class2 because it exists
+    classes.contains( 'class2' ); // checks for class2: false
+    classes.replace( 'class1', 'class0' ) // replaces class1 with class3
+
+  document.write("<br/> div1 id:  " + classes.id);
+
+
+
+  </script>
+
+
+  </body>
+</html>

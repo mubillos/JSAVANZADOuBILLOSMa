@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    </head>
+  <body>
+    <h1>dom</h1>
+    <div id="div1"></div>
+  <script>
+  const div1 = document.getElementById( 'div1' );
+  div1.innerHTML = '<p>Paragraph1</p><p>Paragraph2</p>';
+  
+
+  document.write("<br/> div1 id:  " + div1.id);
+  document.write("<br/> div1 cantidad de hijos:  " + div1.childElementCount);
+document.write("<br/> el hijo de div1 es:  " +div1.childNodes[1].id);
+document.write("<br/> el texto del hijo de div1 es:  " +div2.innerText);
+  document.write("<br/> div2 id:  " + div2.id);
+  document.write("<br/> div2 cantidad de hijos:  " + div2.childElementCount)
+  document.write("<br/> div2 texto: " + div2.innerText);
+  document.write("<br/> div1Clone id : " + div1Clone.id);
+
+
+  </script>
+
+
+  </body>
+</html>
